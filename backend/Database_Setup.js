@@ -11,7 +11,7 @@ const petSchema = new Schema ({
     _id: String,
 });
 
-const conn = await mongoose.createConnection('mongodb://localhost/animal_shelter');
+const conn = mongoose.createConnection('mongodb://localhost/animal_shelter');
 const Pet = conn.model('Pet', petSchema);
 const pet1 = new Pet({
     name: 'Rocky',
