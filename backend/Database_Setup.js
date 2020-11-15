@@ -56,7 +56,7 @@ const pet4 = new Pet({
     id: 'cat'
 });
 
-Pet.insertMany([pet1, pet2, pet3, pet4], function(err){
+Pet.insertMany([dogs, pet2, pet3, pet4], function(err){
     console.log(err)
 })
 
