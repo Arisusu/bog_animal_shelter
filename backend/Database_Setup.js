@@ -23,7 +23,7 @@ const dogs = new Pet({
 	gender: 'Female',
 	yearsOld: 7,
 	adopted: false,
-    _id: 'dog'
+    id: 'dog'
 });
 
 const pet2 = new Pet({
