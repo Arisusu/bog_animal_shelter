@@ -1,0 +1,13 @@
+{
+  "name": "animalshelter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "start": "concurrently --kill-others \"npm run frontend\" \"npm run backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
