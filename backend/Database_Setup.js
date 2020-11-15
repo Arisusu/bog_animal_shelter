@@ -2,21 +2,18 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 const petSchema = new Schema ({
-    _id: String,
-    pets: {
-        name: String,
-        breed: String,
-        status: String,
-        gender: String,
-        yearsOld: Number,
-        adopted: Boolean,
-        id: String,
-    }
+    name: String,
+    breed: String,
+    status: String,
+    gender: String,
+    yearsOld: Number,
+    adopted: Boolean,
+    id: String,
 });
 
 const conn = mongoose.createConnection('mongodb://localhost/animal_shelter', { useNewUrlParser: true });
 const Pet = conn.model('Pet', petSchema);
-const dogs = new Pet({
+const pet1 = new Pet({
     name: 'Rocky',
 	breed: 'American pit bull cross',
 	status: 'Neutered and vaccinated',
@@ -56,7 +53,7 @@ const pet4 = new Pet({
     id: 'cat'
 });
 
-Pet.insertMany([dogs, pet2, pet3, pet4], function(err){
+Pet.insertMany([pet1, pet2, pet3, pet4], function(err){
     console.log(err)
 })
 
