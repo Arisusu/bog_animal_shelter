@@ -4,7 +4,7 @@ import Animal from "./Components/Animal";
 
 function App() {
   React.useEffect(() => {
-    fetch('http://localhost:3001/animals')
+    fetch('/animals')
       .then(data => console.log(data))
   }, [])
   return (
@@ -12,10 +12,10 @@ function App() {
       <Animal 
       imgSrc="https://picsum.photos/350/200"
       name="dog"
-      neutered={false}
-      vaccinated={true}
+      breed="Black Lab"
+      status="Neutered and Vaccinated"
       gender="Male"
-      age="2"
+      yearsOld="2"
       />
     </div>
   );

@@ -6,6 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.get('/animals', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.json([
     {
       _id: 'dog',
