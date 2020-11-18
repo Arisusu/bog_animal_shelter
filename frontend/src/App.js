@@ -3,9 +3,12 @@ import { render } from "react-dom";
 import Animal from "./Components/Animal";
 
 function App() {
+
   React.useEffect(() => {
     fetch('/animals')
-      .then(data => console.log(data))
+      .then(response => response.json())
+      .then(data => 
+        console.log(data))
   }, [])
   return (
     <div className="App">
