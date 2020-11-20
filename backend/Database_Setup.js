@@ -12,11 +12,11 @@ const petSchema = new Schema({
 });
 
 
-module.exports = new Promise((resolve, reject) => {
+module.exports = new Promise(async(resolve, reject) => {
     const conn = mongoose.createConnection('mongodb://localhost/animal_shelter', { useNewUrlParser: true });
     const Pet = conn.model('Pet', petSchema);
 
-    Pet.deleteMany({}, (err) => {
+    await Pet.deleteMany({}, (err) => {
         if (err == null) {
             console.log("Sucessfully cleared database");
         } else {
@@ -65,7 +65,7 @@ module.exports = new Promise((resolve, reject) => {
         id: 'cat'
     });
 
-    Pet.insertMany([pet1, pet2, pet3, pet4], function (err) {
+    await Pet.insertMany([pet1, pet2, pet3, pet4], function (err) {
         if (err == null) {
             console.log("Sucessfully inserted pets into database");
         } else {
