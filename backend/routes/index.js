@@ -32,4 +32,36 @@ router.get('/animals', function (req, res, next) {
   });
 });
 
+router.get('/terry-cat', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Terry",
+          id: "cat"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
+router.get('/chonker-cat', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Chonker",
+          id: "cat"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
 module.exports = router;
