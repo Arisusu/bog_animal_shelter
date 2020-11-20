@@ -1,23 +1,19 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-import Animal from "./Components/Animal";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import AdoptScreen from './Components/AdoptScreen';
+import "./App.css";
 
-function App() {
-  React.useEffect(() => {
-    fetch('/animals')
-      .then(data => console.log(data))
-  }, [])
+const App = () => {
   return (
+    <BrowserRouter>
     <div className="App">
-      <Animal 
-      imgSrc="https://picsum.photos/350/200"
-      name="dog"
-      breed="Black Lab"
-      status="Neutered and Vaccinated"
-      gender="Male"
-      yearsOld="2"
-      />
+      <Switch>
+        <Route path="/">
+          <AdoptScreen />
+        </Route>
+      </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 
