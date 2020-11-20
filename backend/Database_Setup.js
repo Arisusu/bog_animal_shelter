@@ -38,7 +38,7 @@ module.exports = new Promise(async(resolve, reject) => {
     const pet2 = new Pet({
         name: 'Juju',
         breed: 'American staff cross',
-        status: 'Vaccindated, not neutered',
+        status: 'Vaccinated, not neutered',
         gender: 'Male',
         yearsOld: 7,
         adopted: true,
