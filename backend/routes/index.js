@@ -64,4 +64,36 @@ router.get('/chonker-cat', function (req, res, next) {
   });
 });
 
+router.get('/rocky-dog', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Rocky",
+          id: "dog"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
+router.get('/juju-dog', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Juju",
+          id: "dog"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
 module.exports = router;
