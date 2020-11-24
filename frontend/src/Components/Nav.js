@@ -3,7 +3,9 @@ import React from "react";
 const Nav = () => {
     return (
         <nav>
-            <h1> This is a nav bar</h1>
+            <h1>Animal Shelter</h1>
+            <button>About</button>
+            <button>Adopt a pet!</button>
         </nav>
     );
 }
