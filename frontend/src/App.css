@@ -1,9 +1,11 @@
 
 nav {
-  background-color: lightskyblue;
-  font-size: 20px;
+  font-size: 30px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  color: lightblue
+  
 }
 
 #push {
@@ -12,11 +14,16 @@ nav {
 }
 
 .animal {
-  background-color: linen;
-  border-radius: 10px;
+  background-color: lightgray;
+  border-width: 3px;
+  border-radius: 20px;
   width: 800;
   padding: 15px;
   margin: 15px;
+}
+
+.animal:hover {
+  background-color: lightblue;
 }
 
 .animal img {
@@ -40,14 +47,27 @@ nav {
 }
 
 button {
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 100px;
+  color: #1b2337;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-width: 4px;
+  letter-spacing: 2px;
+  transition-duration: 300ms;
+  border: solid lightblue;
+}
+
+button:hover {
+  border-width: 4px;
+  letter-spacing: 2px;
   background-color: white;
-  color: black;
-  font-size: 20px;
-  font-weight: 100;
-  height: 50px;
-  padding: 10px 40px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  margin-top: 2%;
-  cursor: pointer;
+  transition-duration: 300ms;
+  border: solid black;
+
 }

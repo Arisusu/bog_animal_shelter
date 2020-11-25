@@ -14,9 +14,9 @@ const AdoptScreen = () => {
   React.useEffect(() => {
     fetchData();
     }, []);
-    const catsArr = cats.map((info) => (
+    const catsArr = cats.map((info, idx) => (
         <Animal 
-        imgSrc="https://picsum.photos/200/300?random=1"
+        imgSrc= {"https://picsum.photos/200/300?random=" + idx}
         name={info.name}
         breed={info.breed}
         status={info.status}
@@ -24,9 +24,9 @@ const AdoptScreen = () => {
         yearsOld={info.yearsOld}
         />
     ));
-    const dogsArr = dogs.map((info) => (
+    const dogsArr = dogs.map((info, idx) => (
         <Animal 
-        imgSrc="https://picsum.photos/200/300?random=2"
+        imgSrc= {"https://picsum.photos/200/300?random=" + (idx + 30)}
         name={info.name}
         breed={info.breed}
         status={info.status}
@@ -37,11 +37,11 @@ const AdoptScreen = () => {
     return (
         <div>
         <Nav />
-        <h1 id = "animalType">Hella dogs</h1>
+        <h1 id = "animalType">Hella dogs and puppies</h1>
         <div className="group">
             {dogsArr}
         </div>
-        <h1 id = "animalType">Hella cats</h1>
+        <h1 id = "animalType">Hella cats and kittens</h1>
         <div className="group">
             {catsArr}
         </div>

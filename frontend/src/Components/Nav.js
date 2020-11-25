@@ -3,7 +3,8 @@ import React from "react";
 const Nav = () => {
     return (
         <nav>
-            <h1>Animal Shelter</h1>
+            <img src="https://image.freepik.com/free-vector/dog-cat-logo-template-veterinary_56473-127.jpg" alt="Site Logo" width="200" height="200"></img>
+            <h1>Bog's Animal Shelter</h1>
             <button id = "push">About</button>
             <button>Adopt a pet!</button>
         </nav>
