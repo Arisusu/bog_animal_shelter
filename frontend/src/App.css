@@ -10,19 +10,19 @@ nav {
 
 #push {
   margin-left: auto;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 #push2 {
-  margin-right: 40px;
+  margin-right: 80px;
 }
 
 .animal {
   background-color: lightgray;
   border-width: 3px;
   border-radius: 20px;
-  width: 800;
-  padding: 30px;
+  width: 325px;
+  padding: 15px;
   margin: 15px;
 }
 
@@ -31,8 +31,9 @@ nav {
 }
 
 .animal img {
-  width: 350px;
+  width: 325px;
   height: 200px;
+  border-radius: 20px;
 }
 
 .group {
@@ -43,7 +44,6 @@ nav {
 
 #animalName {
   font-size: 35px;
-  text-decoration: solid;
 }
 
 #animalType {
