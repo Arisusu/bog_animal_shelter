@@ -22,10 +22,34 @@ router.get('/animals', function(req, res, next) {
         {
           name: 'Juju',
           breed: 'American staff cross',
-          status: 'Vaccindated, not neutered',
+          status: 'Vaccinated, not neutered',
           gender: 'Male',
           yearsOld: 7,
-          adopted: true,
+          adopted: false,
+        },
+        {
+          name: 'Skipper',
+          breed: 'Swiss Shepherd',
+          status: 'Vaccinated, not neutered',
+          gender: 'Male',
+          yearsOld: 1,
+          adopted: false,
+        } ,
+        {
+          name: 'Joe',
+          breed: 'Portugese Water Dog',
+          status: 'Not vaccinated, not neutered',
+          gender: 'Male',
+          yearsOld: 6,
+          adopted: false,
+        } ,
+        {
+          name: 'Luna',
+          breed: 'German Shepherd',
+          status: 'Vaccinated, neutered',
+          gender: 'Female',
+          yearsOld: 10,
+          adopted: false,
         }
       ]
     },

@@ -7,7 +7,7 @@ const Animal = props => (
         <h2>{props.breed}</h2>
         <h2>{props.status}</h2>
         <h2>{props.gender}</h2>
-        <h2>{props.yearsOld}</h2>
+        <h2>{props.yearsOld} years old </h2>
         <button>Click for More Details!</button>
     </div>
 );

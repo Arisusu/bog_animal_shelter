@@ -22,7 +22,7 @@ nav {
   border-width: 3px;
   border-radius: 20px;
   width: 800;
-  padding: 15px;
+  padding: 30px;
   margin: 15px;
 }
 
@@ -43,7 +43,7 @@ nav {
 
 #animalName {
   font-size: 35px;
-  text-decoration: underline;
+  text-decoration: solid;
 }
 
 #animalType {
