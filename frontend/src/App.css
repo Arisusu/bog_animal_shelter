@@ -10,7 +10,11 @@ nav {
 
 #push {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 60px;
+}
+
+#push2 {
+  margin-right: 40px;
 }
 
 .animal {
@@ -39,6 +43,7 @@ nav {
 
 #animalName {
   font-size: 35px;
+  text-decoration: underline;
 }
 
 #animalType {
