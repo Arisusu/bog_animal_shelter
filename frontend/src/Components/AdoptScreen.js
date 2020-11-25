@@ -37,11 +37,11 @@ const AdoptScreen = () => {
     return (
         <div>
         <Nav />
-        <h1 id = "animalType">Hella dogs and puppies</h1>
+        <h1 id = "animalType">Dogs and puppies</h1>
         <div className="group">
             {dogsArr}
         </div>
-        <h1 id = "animalType">Hella cats and kittens</h1>
+        <h1 id = "animalType">Cats and kittens</h1>
         <div className="group">
             {catsArr}
         </div>
