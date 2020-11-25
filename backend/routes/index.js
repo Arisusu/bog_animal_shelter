@@ -46,7 +46,7 @@ router.get('/animals', function(req, res, next) {
         {
           name: 'Luna',
           breed: 'German Shepherd',
-          status: 'Vaccinated, neutered',
+          status: 'Vaccinated and neutered',
           gender: 'Female',
           yearsOld: 10,
           adopted: false,

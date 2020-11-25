@@ -4,8 +4,8 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-bottom: solid lightblue;
   color: lightblue
-  
 }
 
 #push {
@@ -47,7 +47,7 @@ nav {
 }
 
 #animalType {
-  padding-left: 30px;
+  padding-left: 40px;
   font-size: 35px;
 }
 
