@@ -4,7 +4,7 @@ const Nav = () => {
     return (
         <nav>
             <h1>Animal Shelter</h1>
-            <button>About</button>
+            <button id = "push">About</button>
             <button>Adopt a pet!</button>
         </nav>
     );

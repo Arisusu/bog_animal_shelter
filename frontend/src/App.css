@@ -4,20 +4,26 @@ nav {
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+}
+
+#push {
+  margin-left: auto;
+  margin-right: 30px;
 }
 
 .animal {
-  background-color: lightcyan;
+  background-color: linen;
+  border-radius: 10px;
   width: 800;
   padding: 15px;
   margin: 15px;
 }
 
 .animal img {
-  width: 400px;
+  width: 350px;
   height: 200px;
 }
+
 .group {
   display: flex;
   padding: 20px;
