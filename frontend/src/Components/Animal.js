@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-rou"
+import { Link } from "react-router-dom"
 const Animal = props => (
     <div className="animal">
         <img src={props.imgSrc} alt="A really cute lil animal."/>
@@ -8,7 +8,11 @@ const Animal = props => (
         <h2>Status: {props.status}</h2>
         <h2>Gender: {props.gender}</h2>
         <h2>Age: {props.yearsOld}</h2>
-        <button>Click for More Details!</button>
+        <Link to={
+            {
+                pathname: (props.name + '-' + props.species),
+            }
+        }>Click for More Details!</Link>
     </div>
 );
 

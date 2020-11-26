@@ -22,6 +22,7 @@ const AdoptScreen = () => {
         status={info.status}
         gender={info.gender}
         yearsOld={info.yearsOld}
+        species={"cat"}
         />
     ));
     const dogsArr = dogs.map((info) => (
@@ -32,6 +33,7 @@ const AdoptScreen = () => {
         status={info.status}
         gender={info.gender}
         yearsOld={info.yearsOld}
+        species={"dog"}
         />
     ));
     return (
