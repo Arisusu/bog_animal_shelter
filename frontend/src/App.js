@@ -4,23 +4,17 @@ import AdoptScreen from './Components/AdoptScreen';
 import "./App.css";
 import AboutScreen from "./Components/AboutScreen";
 
-const App = () => {
-  const [info, setInfo] = React.useState({});
-  
+const App = () => {  
   
   return (
     <BrowserRouter>
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <AdoptScreen 
-          setInfo={setInfo}
-          />
+          <AdoptScreen />
         </Route>
         <Route path="/:desc">
-          <AboutScreen 
-          info = {info}
-          />
+          <AboutScreen />
         </Route>
       </Switch>
     </div>

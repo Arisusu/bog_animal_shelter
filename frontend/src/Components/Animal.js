@@ -10,7 +10,7 @@ const Animal = props => (
         <h2>Age: {props.yearsOld}</h2>
         <Link to={
             {
-                pathname: (props.name + '-' + props.species),
+                pathname: (props.name + '-' + props.species).toLocaleLowerCase(),
             }
         }>Click for More Details!</Link>
     </div>
