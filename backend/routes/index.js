@@ -1,55 +1,99 @@
 var express = require('express');
 var router = express.Router();
+const mongoose = require("mongoose");
+const database = require("../Database_Setup");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/animals', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.json([
-    {
-      _id: 'dog',
-      pets: [
-        {
-          name: 'Rocky',
-          breed: 'American pit bull cross',
-          status: 'Neutered and vaccinated',
-          gender: 'Female',
-          yearsOld: 7,
-          adopted: false,
-        },
-        {
-          name: 'Juju',
-          breed: 'American staff cross',
-          status: 'Vaccindated, not neutered',
-          gender: 'Male',
-          yearsOld: 7,
-          adopted: true,
+
+router.get('/animals', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $group: {
+          _id: "$id",
+          "pets": {
+            "$addToSet": {
+              "name": "$name",
+              "breed": "$breed",
+              "status": "$status",
+              "gender": "$gender",
+              "yearsOld": "$yearsOld",
+              "adopted": "$adopted"
+            }
+          }
         }
-      ]
-    },
-    {
-      _id: 'cat',
-      pets: [
-        {
-          name: 'Terry',
-          breed: 'Domestic medium hair cross',
-          status: 'Neutered, not vaccinated',
-          gender: 'Male',
-          yearsOld: 2,
-          adopted: false,
-        },
-        {
-          name: 'Chonker',
-          breed: 'Main coone',
-          status: 'Status unknown',
-          gender: 'Female',
-          yearsOld: 5,
-          adopted: true,
-        }
-      ]
-    }
-  ])
+      }
+    ]).then(aggregate => {
+      res.json(aggregate);
+    });
+  });
 });
+
+router.get('/terry-cat', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Terry",
+          id: "cat"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
+router.get('/chonker-cat', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Chonker",
+          id: "cat"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
+router.get('/rocky-dog', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Rocky",
+          id: "dog"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
+router.get('/juju-dog', function (req, res, next) {
+  database.then(function (Pet) {
+    Pet.aggregate([
+      {
+        $match: {
+          name: "Juju",
+          id: "dog"
+        }
+      }
+    ]).then(aggregate => {
+      console.log(JSON.stringify(aggregate));
+      res.json(aggregate);
+    })
+  });
+});
+
 module.exports = router;
