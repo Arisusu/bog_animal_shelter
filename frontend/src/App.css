@@ -1,5 +1,5 @@
 nav {
-  font-size: 30px;
+  font-size: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,7 +13,7 @@ nav {
 }
 
 #push2 {
-  margin-right: 80px;
+  margin-right: 60px;
 }
 
 .animal {
@@ -23,10 +23,12 @@ nav {
   width: 325px;
   padding: 15px;
   margin: 15px;
+  box-shadow: #1b2337;
 }
 
 .animal:hover {
   background-color: lightblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .animal img {
@@ -47,7 +49,7 @@ nav {
 
 #animalType {
   padding-left: 40px;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 button {
