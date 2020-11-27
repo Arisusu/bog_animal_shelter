@@ -14,7 +14,7 @@ const App = () => {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route exact path="adopt">
+        <Route exact path="/adopt">
           <AdoptScreen />
         </Route>
         <Route path="/:desc">
