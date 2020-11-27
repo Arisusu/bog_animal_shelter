@@ -24,6 +24,7 @@ router.get('/animals', function (req, res, next) {
               "adopted": "$adopted"
             }
           }
+
         }
       }
     ]).then(aggregate => {
