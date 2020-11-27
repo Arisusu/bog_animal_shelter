@@ -9,6 +9,8 @@ const petSchema = new Schema({
     yearsOld: Number,
     adopted: Boolean,
     id: String,
+    info: String,
+    image: String
 });
 
 
@@ -22,6 +24,7 @@ module.exports = new Promise(async(resolve, reject) => {
         } else {
             console.log("Failed to clear database");
             console.log(err);
+            reject(err);
         }
     });
 
@@ -32,17 +35,21 @@ module.exports = new Promise(async(resolve, reject) => {
         gender: 'Female',
         yearsOld: 7,
         adopted: false,
-        id: 'dog'
+        id: 'dog',
+        info: 'i hope we won\'t have a ROCKY relationship',
+        image: 'https://thehappypuppysite.com/wp-content/uploads/2017/11/Pitbull-Lab-Mix-LS-long.jpg'
     });
 
     const pet2 = new Pet({
         name: 'Juju',
-        breed: 'American staff cross',
+        breed: 'American staffy cross',
         status: 'Vaccinated, not neutered',
         gender: 'Male',
         yearsOld: 7,
         adopted: true,
-        id: 'dog'
+        id: 'dog',
+        info: 'am dog. woof.',
+        image: 'https://www.dogbreedinfo.com/images31/AmericanBullStaffyDogAmericanBulldogAmericanStaffordshireTerrierMixBreedDogAtlas1.jpg'
     });
 
     const pet3 = new Pet({
@@ -52,17 +59,21 @@ module.exports = new Promise(async(resolve, reject) => {
         gender: 'Male',
         yearsOld: 2,
         adopted: false,
-        id: 'cat'
+        id: 'cat',
+        info: 'everyone thinks i\'m a dog',
+        image: 'https://www.vancouversun.com/news/metro/cms/binary/9838523.jpg?size=640x420'
     });
 
     const pet4 = new Pet({
         name: 'Chonker',
-        breed: 'Main coone',
+        breed: 'Maine coone',
         status: 'Status unknown',
         gender: 'Female',
         yearsOld: 5,
         adopted: true,
-        id: 'cat'
+        id: 'cat',
+        info: 'c h o n k',
+        image: 'https://cdn.telanganatoday.com/wp-content/uploads/2019/04/123032MAINE-COON-BLACK.jpg'
     });
 
     await Pet.insertMany([pet1, pet2, pet3, pet4], function (err) {
@@ -71,6 +82,7 @@ module.exports = new Promise(async(resolve, reject) => {
         } else {
             console.log("Failed to insert pets into database");
             console.log(err);
+            reject(err);
         }
     });
     resolve(Pet);

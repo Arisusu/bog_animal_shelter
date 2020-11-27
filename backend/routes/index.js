@@ -21,7 +21,9 @@ router.get('/animals', function (req, res, next) {
               "status": "$status",
               "gender": "$gender",
               "yearsOld": "$yearsOld",
-              "adopted": "$adopted"
+              "adopted": "$adopted",
+              "info": "$info",
+              "image": "$image"
             }
           }
         }
