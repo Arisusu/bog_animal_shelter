@@ -55,7 +55,7 @@ module.exports = new Promise(async(resolve, reject) => {
     const pet3 = new Pet({
         name: 'Terry',
         breed: 'Domestic medium hair cross',
-        status: 'Neutered, not vaccinated',
+        status: 'Neutered, vaccinated',
         gender: 'Male',
         yearsOld: 2,
         adopted: false,
@@ -67,7 +67,7 @@ module.exports = new Promise(async(resolve, reject) => {
     const pet4 = new Pet({
         name: 'Chonker',
         breed: 'Maine coone',
-        status: 'Status unknown',
+        status: 'Not neutered, not vaccinated',
         gender: 'Female',
         yearsOld: 5,
         adopted: false,
