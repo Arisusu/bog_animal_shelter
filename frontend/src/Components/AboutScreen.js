@@ -2,13 +2,18 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Nav from "./Nav";
 
+
 const AboutScreen = () => {
     const { desc } = useParams();
     const [info, setInfo] = React.useState({});
+    const [isAdopted, setIsAdopted] = React.useState(false);
     async function fetchData() {
         const response = await fetch(desc);
         const data = await response.json();
         setInfo(data[0]);
+    }
+    function updateAdopted() {
+        setIsAdopted(true);
     }
     React.useEffect(() => {
         fetchData();
@@ -39,10 +44,10 @@ const AboutScreen = () => {
                 <h1 id = "aboutheader">A quick message from {info.name}:</h1>
                 <h2>{info.info}</h2>
                 <div>If you want to learn more about me, click on the "Adopt Me" button below! Then, check the About page for adoption hours, contact information, and the shelter's location.</div>
-                <div className = {info.adopted ? "" : "hidden"}>
+                <div className = {isAdopted? "" : "hidden"}>
                     We added you to a list of potential adopters for {info.name}! Please visit us at our shelter to discuss next steps.
                 </div>
-                <button id = "push">Adopt Me!</button>
+                <button id = "push" onClick = {updateAdopted}>Adopt Me!</button>
                 <Link to="/adopt">
                     <button>Return to Adopt Page</button>
                 </Link>
