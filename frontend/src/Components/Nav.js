@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav>
             <img src="https://image.freepik.com/free-vector/dog-cat-logo-template-veterinary_56473-127.jpg" alt="Site Logo" width="200" height="200"></img>
-            <h1>BOG's Animal Shelter</h1>
+            <h1 id = "navheader">BOG's Animal Shelter</h1>
             <Link to="/">
                 <button id = "push">About</button>
             </Link> 

@@ -70,7 +70,7 @@ module.exports = new Promise(async(resolve, reject) => {
         status: 'Status unknown',
         gender: 'Female',
         yearsOld: 5,
-        adopted: false,
+        adopted: true,
         id: 'cat',
         info: 'c h o n k',
         image: 'https://cdn.telanganatoday.com/wp-content/uploads/2019/04/123032MAINE-COON-BLACK.jpg'

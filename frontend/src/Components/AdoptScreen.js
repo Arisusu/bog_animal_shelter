@@ -26,7 +26,7 @@ const AdoptScreen = () => {
         />
     ));
     const dogsArr = dogs.map((info, idx) => (
-        <Animal 
+        <Animal
         imgSrc= {info.image}
         name={info.name}
         breed={info.breed}

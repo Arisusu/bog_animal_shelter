@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 const Animal = props => (
-    <div className="animal">
+    <div className = "animal">
         <img src={props.imgSrc} alt="A really cute lil animal."/>
         <h2 id = "animalName">{props.name}</h2>
         <h2>{props.breed}</h2>

@@ -7,8 +7,12 @@ nav {
   color: lightblue
 }
 
+#navheader {
+  margin-right: 40px;
+}
+
 .aboutpage {
-  margin: 20px;
+  margin: 10px;
 }
 
 .row {
@@ -39,7 +43,7 @@ nav {
 }
 
 #push {
-  margin-left: 60px;
+  margin-left: auto;
   margin-right: 40px;
 }
 
@@ -127,8 +131,11 @@ button {
 button:hover {
   border-width: 4px;
   letter-spacing: 2px;
-  background-color: white;
   transition-duration: 300ms;
   border: solid black;
 
+}
+
+.hidden {
+  display: none;
 }

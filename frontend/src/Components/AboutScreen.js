@@ -38,9 +38,13 @@ const AboutScreen = () => {
             <div className = "aboutpage2">
                 <h1 id = "aboutheader">A quick message from {info.name}:</h1>
                 <h2>{info.info}</h2>
-                <h2>If you want to learn more about me, come visit me in the shelter! Check the About page for adoption hours, contact information, and the shelter's location.</h2>
+                <div>If you want to learn more about me, click on the "Adopt Me" button below! Then, check the About page for adoption hours, contact information, and the shelter's location.</div>
+                <div className = {info.adopted ? "" : "hidden"}>
+                    We added you to a list of potential adopters for {info.name}! Please visit us at our shelter to discuss next steps.
+                </div>
+                <button id = "push">Adopt Me!</button>
                 <Link to="/adopt">
-                    <button onClick="info.adopted = false">Adopt Me!</button>
+                    <button>Return to Adopt Page</button>
                 </Link>
             </div>
         </div>
