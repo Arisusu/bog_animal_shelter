@@ -37,7 +37,7 @@ module.exports = new Promise(async(resolve, reject) => {
         adopted: false,
         id: 'dog',
         info: 'i hope we won\'t have a ROCKY relationship',
-        image: 'https://thehappypuppysite.com/wp-content/uploads/2017/11/Pitbull-Lab-Mix-LS-long.jpg'
+        image: 'https://stubbydog.org/wp-content/uploads/2012/08/names_gal.jpg'
     });
 
     const pet2 = new Pet({

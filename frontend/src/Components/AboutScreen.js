@@ -26,7 +26,7 @@ const AboutScreen = () => {
                     </div>
                     <div className = "column">
                         <div className = "infocolumn">
-                            <h2 id = "aboutme">About Me</h2>
+                            <h1>About Me</h1>
                             <h2>Breed: {info.breed}</h2>
                             <h2>Status: {info.status}</h2>
                             <h2>Gender: {info.gender}</h2>
@@ -36,9 +36,11 @@ const AboutScreen = () => {
                 </div>
             </div>
             <div className = "aboutpage2">
-                <h2> {info.info}</h2>
+                <h1 id = "aboutheader">A quick message from {info.name}:</h1>
+                <h2>{info.info}</h2>
+                <h2>If you want to learn more about me, come visit me in the shelter! Check the About page for adoption hours, contact information, and the shelter's location.</h2>
                 <Link to="/adopt">
-                    <button>Adopt Me!</button>
+                    <button onClick="info.adopted = false">Adopt Me!</button>
                 </Link>
             </div>
         </div>

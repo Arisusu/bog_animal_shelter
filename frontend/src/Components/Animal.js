@@ -13,7 +13,7 @@ const Animal = props => (
                 pathname: (props.name + '-' + props.species).toLocaleLowerCase(),
             }
         }>
-            <button>Click for More Details!</button>
+            <button>Click for more details!</button>
         </Link>
     </div>
 );
