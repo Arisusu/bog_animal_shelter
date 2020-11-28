@@ -20,7 +20,9 @@ const AboutScreen = () => {
         <h2>Status: {info.status}</h2>
         <h2>Gender: {info.gender}</h2>
         <h2>Age: {info.yearsOld}</h2>
-        <Link to="/adopt">Back to Adopt Page</Link>
+        <Link to="/adopt">
+            <button>Back to Adopt Page</button>
+        </Link>
         </div>
     )
 }
