@@ -46,7 +46,7 @@ module.exports = new Promise(async(resolve, reject) => {
         status: 'Vaccinated, not neutered',
         gender: 'Male',
         yearsOld: 7,
-        adopted: true,
+        adopted: false,
         id: 'dog',
         info: 'am dog. woof.',
         image: 'https://www.dogbreedinfo.com/images31/AmericanBullStaffyDogAmericanBulldogAmericanStaffordshireTerrierMixBreedDogAtlas1.jpg'
@@ -70,7 +70,7 @@ module.exports = new Promise(async(resolve, reject) => {
         status: 'Status unknown',
         gender: 'Female',
         yearsOld: 5,
-        adopted: true,
+        adopted: false,
         id: 'cat',
         info: 'c h o n k',
         image: 'https://cdn.telanganatoday.com/wp-content/uploads/2019/04/123032MAINE-COON-BLACK.jpg'

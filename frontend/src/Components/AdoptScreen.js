@@ -16,7 +16,7 @@ const AdoptScreen = () => {
     }, []);
     const catsArr = cats.map((info, idx) => (
         <Animal 
-        imgSrc= {"https://picsum.photos/200/300?random=" + idx}
+        imgSrc= {info.image}
         name={info.name}
         breed={info.breed}
         status={info.status}
@@ -27,7 +27,7 @@ const AdoptScreen = () => {
     ));
     const dogsArr = dogs.map((info, idx) => (
         <Animal 
-        imgSrc= {"https://picsum.photos/200/300?random=" + (idx + 30)}
+        imgSrc= {info.image}
         name={info.name}
         breed={info.breed}
         status={info.status}

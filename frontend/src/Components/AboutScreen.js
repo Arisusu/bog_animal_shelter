@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Nav from "./Nav";
 
 const AboutScreen = () => {
     const { desc } = useParams();
@@ -14,15 +15,32 @@ const AboutScreen = () => {
         }, []);
     return (
         <div>
-        <img src="https://picsum.photos/350/200" alt="A really cute lil animal."/>
-        <h2>Name: {info.name}</h2>
-        <h2>Breed: {info.breed}</h2>
-        <h2>Status: {info.status}</h2>
-        <h2>Gender: {info.gender}</h2>
-        <h2>Age: {info.yearsOld}</h2>
-        <Link to="/adopt">
-            <button>Back to Adopt Page</button>
-        </Link>
+            <Nav />
+            <div className="aboutpage">
+                <h2 id = "aboutName">{info.name}</h2>
+                <div className = "row">
+                    <div className = "column">
+                        <div className = "imgcolumn"> 
+                            <img src= {info.image} alt= "animal pics" width = "100%" height= "auto"/>
+                        </div>
+                    </div>
+                    <div className = "column">
+                        <div className = "infocolumn">
+                            <h2 id = "aboutme">About Me</h2>
+                            <h2>Breed: {info.breed}</h2>
+                            <h2>Status: {info.status}</h2>
+                            <h2>Gender: {info.gender}</h2>
+                            <h2>Age: {info.yearsOld}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className = "aboutpage2">
+                <h2> {info.info}</h2>
+                <Link to="/adopt">
+                    <button>Adopt Me!</button>
+                </Link>
+            </div>
         </div>
     )
 }
